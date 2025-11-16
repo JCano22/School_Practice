@@ -1,38 +1,28 @@
 #include <iostream>
 
-/*Write an application that prompts the user to enter text and then detects the position of the 
-second occurrence of the 'w' symbol in this text. If such 'w' symbol is not found, the application 
-should print -1. Only null terminated strings should be used. Don't use any string library function.*/
+/*Write a function that takes two parameters: the address of the first element of an array and the 
+length of the array. The function should return the address of the element containing the minimum value.*/
 using namespace std;
 
+int* minVal(int arr[], int n)
+{
+    int* minPtr = &arr[0];
+
+    for(int i = 1; i < n; i++)
+    {
+        if(arr[i] < *minPtr)
+            minPtr = &arr[i];
+    }
+
+    return minPtr;
+}
 
 int main()
 {
-    char userWord[100];
-    int cnt = 0, pos = -1, i = 0;
+    int ra[5] = {5, 1, 2, 3, 4};
+    int *min = minVal(ra, 5);
 
-    cout << "Enter text: ";
-    cin.getline(userWord, 100);
-    
-    while(userWord[i])
-    {
-        if(userWord[i] == 'w' || userWord[i] == 'W')
-        {
-            cnt++;
-            pos = i;
-        }
-        
-        if(cnt == 2)
-            break;
-        
-        i++;
-    }
+    cout << *min << endl;
 
-    if(cnt == 0)
-        cout << "-1" << endl;
-    else
-        cout << "W or w located in position(s) " << pos << endl;
-
-       
     return 0;
 }
