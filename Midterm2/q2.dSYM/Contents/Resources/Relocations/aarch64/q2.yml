@@ -1,0 +1,5 @@
+---
+triple:          'arm64-apple-darwin'
+binary-path:     '/Users/jorgecano/Documents/Personal/Coding/Midterm2/q2'
+relocations:     []
+...

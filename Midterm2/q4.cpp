@@ -4,29 +4,10 @@ using namespace std;
 int min2(int a, int b);
 int min3(int a, int b, int c);
 
-/*Write a function Min2 that returns the minimum of the two numbers passed as arguments. Then, write a function Min3 that returns the minimum of the three numbers passed as arguments. Do not use comparison operations in the Min3 function; instead, call the Min2 function. You may not call other functions from the Min3 function except Min2.*/
+/*Write an application where three arrays are defined. The size of the third array is equal to the sum of the sizes of the first and second arrays. The application should merge the values from the first and second arrays into the third array. For example, if the first array is defined as int u[] = {13, 17, 29} and the second array as int w[] = {23, 37}, and the third array is declared as int z[5], then application should write into z array the following numbers: 13, 17, 29, 23, 37*/
 int main()
 {
-    int a = 11, b =3, c =14;
-
-    cout << "minimum of a and b: " << min2(a, b) << '\n';
-
-    cout << "minimum of a, b, and c: " << min3(a, b, c) << '\n';
+    
 
     return 0;
-}
-
-int min2(int a, int b)
-{
-    if(a < b)
-        return a;
-    else
-        return b;
-}
-
-int min3(int a, int b, int c)
-{
-    int min = min2(min2(a, b), c);
-
-    return min;
 }
