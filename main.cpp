@@ -6,15 +6,15 @@ using namespace std;
 
 int* minVal(int arr[], int n)
 {
-    int* minPtr = &arr[0];
+    int k = 0;
 
     for(int i = 1; i < n; i++)
     {
-        if(arr[i] < *minPtr)
-            minPtr = &arr[i];
+        if(arr[i] < arr[k])
+            k = i;
     }
 
-    return minPtr;
+    return &arr[k];
 }
 
 int main()

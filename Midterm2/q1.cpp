@@ -10,12 +10,10 @@ int main() {
     int u[10] = {17, 19, 23, 19, 17, 23, 29, 17, 29, 23};
     bool seenBefore;
 
-    cout << u[0] << " ";
-
-    for(int i = 1; i < 10; i++)
+    for(int i = 0; i < 10; i++)
     {
         seenBefore = false;
-        for(int j = 0; j < i; j++)   // look only at previous elements
+        for(int j = 0; j < i; j++) 
         {
             if(u[i] == u[j])
             {
