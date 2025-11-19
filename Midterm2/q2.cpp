@@ -5,24 +5,26 @@ using namespace std;
 
 int main()
 {
-    char userWrd[100];
-    int i = 0, cnt = 0;
+    char userTxt[100];
+    int cnt = 0, i = 0;
 
     cout << "Enter text: ";
-    cin.getline(userWrd, 100);
+    cin.getline(userTxt, 100);
 
-    while(userWrd[i] != '\0')
+    while(userTxt[i] != '\0')
     {
-        if(userWrd[i] == 'w')
+        if(userTxt[i] == 'w')
             cnt++;
-        
+
         if(cnt == 2)
             break;
+
         i++;
     }
 
-    if(cnt < 2)
-        cout << "-1" << endl;
+    if(cnt == 2)
+        cout << "index of 2nd 'w': " << i << "\n";
     else
-        cout << "The second 'w' is located in index " << i << endl;
+        cout << "-1\n";
+
 }
